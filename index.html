@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>背景音乐网页</title>
     <style>
-        /* 设置背景图片（直接引用本地文件） */
+        /* 设置背景图片（直接引用根目录下的 background.jpg） */
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url('background.jpg'); /* 你的背景图片文件 */
+            background-image: url('./background.jpg'); /* 路径改成明确的 ./ 以防路径错误 */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 
     <!-- 音频元素（默认不播放） -->
     <audio id="bgm" loop>
-        <source src="music.mp3" type="audio/mpeg"> <!-- 你的音频文件 -->
+        <source src="./music.mp3" type="audio/mpeg"> <!-- 路径改成 ./ 保证在根目录可以找到 -->
         您的浏览器不支持 audio 标签。
     </audio>
 
